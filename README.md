@@ -1,5 +1,5 @@
-# MWO_CommandConsole
-Code for MWO_CommandConsole
+# CommandConsole
+Code for CommandConsole
 
 /*
 * Requires Joystick Library v1.0 
