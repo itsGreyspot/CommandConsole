@@ -8,6 +8,8 @@ Code for CommandConsole
 *   http://playground.arduino.cc/Code/Keypad
 *   
 * Thanks to: 
+*  PGI for Mechwarrior Online
+*   http://mwomercs.com    
 *  AMSTUDIO 
 *   https://www.patreon.com/AMSTUDIO
 *   https://www.youtube.com/watch?v=Z7Sc4MJ8RPM&t=169s
