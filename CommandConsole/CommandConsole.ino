@@ -1,6 +1,8 @@
 
 
 /*
+* Requires an Adriano Leonardo or Pro Micro
+*
 * Requires Joystick Library v1.0 
 *   https://github.com/MHeironimus/ArduinoJoystickLibrary/tree/version-1.0
 * Requires Keypad Library 
@@ -22,7 +24,7 @@
 #define ENABLE_PULLUPS
 #define NUMROTARIES 2
 
-//LiquidCrystal_I2C lcd(0x27,20,4);
+//LiquidCrystal_I2C lcd(0x27,20,4); // change 0x27 to serial address
 
 struct rotariesdef {
   byte pin1;
@@ -32,8 +34,8 @@ struct rotariesdef {
   volatile unsigned char state;
 };
 
-const byte ROWS = 5; //four rows
-const byte COLS = 5; //four columns
+const byte ROWS = 5; //five rows
+const byte COLS = 5; //five columns
 
 byte keys[ROWS][COLS] = {
   {0, 1, 2, 3, 4},
@@ -98,8 +100,8 @@ const unsigned char ttable[7][4] = {
 };
 #endif
 
-byte rowPins[ROWS] = {21,20,19,18,15}; //connect to the row pinouts of the kpd  /*A3, A2, A1, A0, 15*/
-byte colPins[COLS] = {14,16,10,9,8}; //connect to the column pinouts of the kpd /*14,16,10,9,8*/
+byte rowPins[ROWS] = {21,20,19,18,15}; //connect to the row pinouts of the kpd  /* pins A3, A2, A1, A0, 15 on pro micro */
+byte colPins[COLS] = {14,16,10,9,8}; //connect to the column pinouts of the kpd /* pins 14,16,10,9,8 on pro micro */
 
 Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
